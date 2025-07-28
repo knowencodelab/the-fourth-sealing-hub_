@@ -296,7 +296,7 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
               <Card>
                 <CardHeader>
                   <CardTitle>Learning Objectives</CardTitle>
-                  <CardDescription>What you'll achieve by the end of this course</CardDescription>
+                  <CardDescription>What you&apos;ll achieve by the end of this course</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
