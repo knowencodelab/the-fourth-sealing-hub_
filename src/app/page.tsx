@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+//import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 import CourseCard from '@/components/CourseCard'
 
