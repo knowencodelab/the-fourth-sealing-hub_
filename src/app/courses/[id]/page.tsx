@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Progress } from '@/components/ui/progress'
 import Link from 'next/link'
-import { notFound } from 'next/navigation'
 
 // Mock course data - in real app, this would come from database
 const getCourseData = (id: string) => {
@@ -213,11 +212,12 @@ const getCourseData = (id: string) => {
   return courses[id as keyof typeof courses] || null
 }
 
-export default async function CourseDetailPage({ params }: { params: { id: string } }) {
-  const course = getCourseData(params.id)
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params; // Resolve the promise
+  const course = getCourseData(resolvedParams.id);
 
   if (!course) {
-    notFound()
+    return <div>Course not found</div>;
   }
 
   return (
