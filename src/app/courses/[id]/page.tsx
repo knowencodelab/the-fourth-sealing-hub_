@@ -15,7 +15,7 @@ const getCourseData = (id: string) => {
       description: "Master Python programming, R modules, and health data analysis techniques in this comprehensive 6-week program.",
       duration: "6 weeks",
       fee: "KSH 42,000",
-      instructor: "Dr. Sarah Johnson",
+      instructor: "Mr. Knowen Cosmas & Dr.Loice Achieng",
       prerequisites: ["Basic computer skills", "High school mathematics", "Interest in healthcare data"],
       objectives: [
         "Understand the fundamentals of health informatics",
@@ -90,7 +90,7 @@ const getCourseData = (id: string) => {
       description: "Learn systematic approaches to managing research data and evaluating project outcomes effectively.",
       duration: "6 weeks",
       fee: "KSH 42,000",
-      instructor: "Prof. Michael Chen",
+      instructor: "Mr. Knowen Cosmas & Dr. Loice Achieng",
       prerequisites: ["Research experience", "Basic statistics knowledge", "Computer literacy"],
       objectives: [
         "Master research data management principles",
@@ -152,7 +152,7 @@ const getCourseData = (id: string) => {
       description: "Advanced cybersecurity training covering threat assessment, security implementation, and compliance frameworks.",
       duration: "6 weeks",
       fee: "KSH 42,000",
-      instructor: "Dr. Alex Rodriguez",
+      instructor: "Mr. Knowen Cosmas ",
       prerequisites: ["Basic networking knowledge", "Computer systems understanding", "IT experience preferred"],
       objectives: [
         "Understand cybersecurity fundamentals",
@@ -213,7 +213,7 @@ const getCourseData = (id: string) => {
   return courses[id as keyof typeof courses] || null
 }
 
-export default function CourseDetailPage({ params }: { params: { id: string } }) {
+export default async function CourseDetailPage({ params }: { params: { id: string } }) {
   const course = getCourseData(params.id)
 
   if (!course) {
